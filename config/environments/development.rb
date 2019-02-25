@@ -9,6 +9,11 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  #add
+  #config.log_level = :warn
+  config.logger = Logger.new('log/development.log', 'daily')
+  config.custom_logger = Logger.new('log/custom.log', 'weekly')
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
