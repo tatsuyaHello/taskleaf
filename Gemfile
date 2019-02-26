@@ -10,6 +10,7 @@ gem 'rails_autolink'
 gem 'ransack'
 gem 'kaminari'
 gem 'sidekiq'
+gem 'webpacker'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

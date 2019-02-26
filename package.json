@@ -1,5 +1,12 @@
 {
   "name": "taskleaf",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
 }
