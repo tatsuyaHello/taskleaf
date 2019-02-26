@@ -31,7 +31,10 @@ class TasksController < ApplicationController
     end
 
     if @task.save
-      logger.debug "task: #{@task.attributes.inspect}"
+      #deliver_nowは即時送信を行うためのメソッド
+      TaskMailer.creation_email(@task).deliver_now
+      #↑ TaskMailer.creation_email(@task).deliver_later(wait: 5.minutes)とかくと、非同期処理として5分後にメールを送信できる
+
       redirect_to tasks_path, notice: "タスク「#{@task.name}」を登録しました"
     else
       render 'new'
