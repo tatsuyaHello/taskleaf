@@ -19,7 +19,8 @@ table.table.table-hover
 	thead.thead-default
 		tr
 			//t("activerecord.attributes.task.name")と同じ
-			th = Task.human_attribute_name(:name)
+			//th = Task.human_attribute_name(:name)
+			th = sort_link(@q, :name)
 			th = Task.human_attribute_name(:created_at)
 			th
 	tbody
