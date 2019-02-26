@@ -40,6 +40,7 @@ class TasksController < ApplicationController
       TaskMailer.creation_email(@task).deliver_now
       #↑ TaskMailer.creation_email(@task).deliver_later(wait: 5.minutes)とかくと、非同期処理として5分後にメールを送信できる
 
+      SampleJob.perform_later
       redirect_to tasks_path, notice: "タスク「#{@task.name}」を登録しました"
     else
       render 'new'

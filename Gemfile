@@ -9,6 +9,7 @@ gem 'bootstrap', '4.1.3'
 gem 'rails_autolink'
 gem 'ransack'
 gem 'kaminari'
+gem 'sidekiq'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
